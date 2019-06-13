@@ -1,0 +1,27 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+header { 
+    align-items: center;
+    background: #80c254;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    min-height: 200px;
+    padding: 0;
+}
+
+header h1 {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    line-height: 1;
+    margin: 0;
+    
+    
+    
+}
+
