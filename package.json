@@ -6,9 +6,9 @@
   "license": "MIT",
   "scripts": {
     "webpack-dev-server": "webpack-dev-server --history-api-fallback",
-    "prod": "npm run webpack -- --env.mode production --env.presets serviceworker",
-    "dev": "npm run webpack-dev-server -- --env.mode development",
-    "dev:sw": "npm run webpack-dev-server -- --env.mode development  --env.presets serviceworker"
+    "prod": "webpack -- --env.mode production --env.presets serviceworker",
+    "dev": "webpack-dev-server -- --env.mode development",
+    "dev:sw": " webpack-dev-server -- --env.mode development  --env.presets serviceworker"
   },
   "dependencies": {
     "@polymer/lit-element": "^0.7.1",

@@ -12,10 +12,13 @@ class GalleryItem extends LitElement {
 			}
 		}
 
+		createRenderRoot(){
+			return this;
+	}
+
 render(){
     return html`
-    <div class="gallery-item">
-    	<div class="gallery-item__image-container">
+    	<div class="gallery-item__image">
 				<img src=${this.image} alt="">
 			</div> 
 			<div class="gallery-item__info">
@@ -28,8 +31,7 @@ render(){
 							`)
 					}</p>
 				<p class="gallery-item__date">11/23/19</p>
-			</div>	
-    </div>
+			</div>
     `
 }
 }

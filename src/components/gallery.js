@@ -1,6 +1,7 @@
 import {LitElement, html} from '@polymer/lit-element';
-//import nanoid from 'nanoid';
+import nanoid from 'nanoid';
 import './gallery-item';
+import './gallery-search';
 
 class PsGallery extends LitElement {
 	static get properties() {
@@ -13,7 +14,9 @@ class PsGallery extends LitElement {
 		super();
 		this.images = []
 	}
-
+	createRenderRoot(){
+		return this;
+}
 	connectedCallback() {
 		super.connectedCallback();
 	  this.loadAsync()
@@ -27,11 +30,19 @@ class PsGallery extends LitElement {
 		this.images = data.rows;
 		
 	}
+	search(e, value) {
+		console.log(e.target.value, value)
+	}
+
 	render(){
 		return html`
-		<div class="gallery">
+			<div class="gallery-search__container">
+				<ps-gallery-search></ps-gallery-search>
+			</div>
+			<div className="gallery-container">
 			${this.images.map(image => html`
-			<ps-gallery-item
+			<ps-gallery-item class="gallery-item"
+			id=${image.id = nanoid()}
 			.description=${image.description}
 			.image=${image.image}
 			.tags=${image.tag}
@@ -39,8 +50,7 @@ class PsGallery extends LitElement {
 			></ps-gallery-item>
 			`
 			)}
-			
-		</div>
+			</div>
 		`
 	}
 }
