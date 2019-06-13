@@ -5,7 +5,11 @@
   "author": "serge-tj <serge@tommyjohn.com>",
   "license": "MIT",
   "dependencies": {
-    "@polymer/lit-element": "^0.7.1"
+    "@polymer/lit-element": "^0.7.1",
+    "@webcomponents/webcomponentsjs": "^2.2.10",
+    "axios": "^0.19.0",
+    "lit-html": "^1.1.0",
+    "nanoid": "^2.0.3"
   },
   "devDependencies": {
     "webpack": "^4.34.0",
