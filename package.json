@@ -5,6 +5,10 @@
   "author": "serge-tj <serge@tommyjohn.com>",
   "license": "MIT",
   "dependencies": {
-    
+    "@polymer/lit-element": "^0.7.1"
+  },
+  "devDependencies": {
+    "webpack": "^4.34.0",
+    "webpack-cli": "^3.3.4"
   }
 }
